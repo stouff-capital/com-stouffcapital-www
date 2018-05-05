@@ -1,0 +1,34 @@
+#welcome-text {
+  > .hero {
+    max-width: 960px;
+    margin: 0 auto;
+
+    > p {
+      font-family: $monospace-font;
+      font-size:29px;
+      line-height: 127%;
+
+    }
+    padding-right:5%;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+
+    @include bp(400px, min) {
+      padding-right: 20%;
+    }
+
+    @include bp(600px, min) {
+      padding-right: 40%;
+      > p {
+        font-size: 38px;
+      }
+    }
+
+    @include bp(960px, min) {
+      padding-right: 30%;
+      > p {
+        font-size:54px;
+      }
+    }
+  }
+}

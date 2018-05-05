@@ -1,0 +1,24 @@
+{
+  "name": "stouff-capital-website",
+  "version": "0.8.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "node-sass-chokidar": "^1.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stouff-capital/stouff-capital-website.git"
+  },
+  "author": "Greg Chevalley",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/stouff-capital/stouff-capital-website/issues"
+  },
+  "homepage": "https://github.com/stouff-capital/stouff-capital-website#readme"
+}

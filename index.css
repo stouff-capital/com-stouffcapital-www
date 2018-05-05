@@ -1,0 +1,144 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  background-color: rgba(240, 238, 228, 0.4); }
+
+header {
+  display: block;
+  max-width: 960px;
+  margin: 0 auto; }
+  header #logo {
+    display: block;
+    width: 40px;
+    font-size: 1px;
+    overflow: hidden;
+    height: 40px;
+    background-color: #FFBA08;
+    position: relative;
+    font-family: "Anonymous Pro", Menlo, monospace;
+    color: transparent; }
+    header #logo:after {
+      content: "sc";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      font-size: 15px;
+      color: white; }
+
+body > .content {
+  display: block;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px; }
+  @media screen and (min-width: 600px) {
+    body > .content {
+      padding: 40px; } }
+
+footer {
+  display: block;
+  background-color: #032B43;
+  padding: 20px;
+  color: white; }
+  @media screen and (min-width: 600px) {
+    footer {
+      padding: 40px; } }
+  footer > .content {
+    max-width: 960px;
+    margin: 0 auto; }
+  footer a {
+    color: white; }
+  footer address {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px; }
+
+.email-action {
+  background-color: #3F88C5;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+  cursor: pointer; }
+  .email-action.focus {
+    border: 1px solid #3F88C5;
+    background-color: white;
+    color: #3F88C5; }
+    .email-action.focus input, .email-action.focus span {
+      color: #3F88C5; }
+  .email-action label {
+    position: relative;
+    white-space: nowrap; }
+    .email-action label input {
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      padding: 0;
+      background-color: transparent;
+      opacity: 0;
+      transition: all 0.5s ease;
+      box-sizing: border-box;
+      border-width: 0;
+      font-family: "Work Sans", Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      padding: 10px 20px;
+      color: white; }
+      .email-action label input ~ div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        user-select: none;
+        pointer-events: none; }
+        .email-action label input ~ div > span {
+          cursor: pointer;
+          display: block;
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding-left: 10px;
+          box-sizing: border-box;
+          width: 30%;
+          transition: all 0.5s ease;
+          user-select: none; }
+      .email-action label input ~ div > .focus {
+        opacity: 0;
+        left: 50%; }
+      .email-action label input:focus, .email-action label input:not(:placeholder-shown) {
+        cursor: text;
+        opacity: 1;
+        left: 30%; }
+        .email-action label input:focus ~ div > .normal, .email-action label input:not(:placeholder-shown) ~ div > .normal {
+          opacity: 0;
+          left: -50%; }
+        .email-action label input:focus ~ div > .focus, .email-action label input:not(:placeholder-shown) ~ div > .focus {
+          opacity: 0.8;
+          left: 0%; }
+
+#welcome-text > .hero {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-right: 5%;
+  box-sizing: border-box;
+  transition: all 0.5s ease; }
+  #welcome-text > .hero > p {
+    font-family: "Anonymous Pro", Menlo, monospace;
+    font-size: 29px;
+    line-height: 127%; }
+  @media screen and (min-width: 400px) {
+    #welcome-text > .hero {
+      padding-right: 20%; } }
+  @media screen and (min-width: 600px) {
+    #welcome-text > .hero {
+      padding-right: 40%; }
+      #welcome-text > .hero > p {
+        font-size: 38px; } }
+  @media screen and (min-width: 960px) {
+    #welcome-text > .hero {
+      padding-right: 30%; }
+      #welcome-text > .hero > p {
+        font-size: 54px; } }

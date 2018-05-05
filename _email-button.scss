@@ -1,0 +1,79 @@
+.email-action {
+  background-color: $button-color;
+  border-radius: 4px;
+  color: white;
+  border:1px solid transparent;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  &.focus {
+    border:1px solid $button-color;
+    background-color: white;
+    color:$button-color;
+
+    input, span {
+      color:$button-color;
+    }
+  }
+
+  label {
+    position:relative;
+    white-space:nowrap;
+    input {
+      cursor: pointer;
+      position:relative;
+       width:100%;
+       padding:0;
+       background-color:transparent;
+       opacity:0;
+       transition:all 0.5s ease;
+       box-sizing:border-box;
+       border-width:0;
+       font-family: $text-font;
+       font-size: 16px;
+       padding:10px 20px;
+       color: white;
+       & ~ div {
+         position:absolute;
+         top:0;
+         bottom:0;
+         left:0;
+         right:0;
+         user-select: none;
+         pointer-events: none;
+
+         > span {
+           cursor: pointer;
+           display:block;
+           pointer-events: none;
+           position: absolute;
+           top:0;
+           left:0;
+           padding-left: 10px;
+           box-sizing: border-box;
+           width:30%;
+           transition:all 0.5s ease;
+           user-select: none;
+         }
+       }
+       & ~ div > .focus{ opacity:0; left: 50%; }
+       &:focus, &:not(:placeholder-shown) {
+         cursor: text;
+         opacity:1;
+         left:30%;
+         & ~ div {
+           >.normal {
+             opacity:0;
+             left:-50%;
+           }
+           >.focus {
+             opacity:0.8;
+             left:0%;
+           }
+         }
+       }
+    }
+    > div {
+
+    }
+  }
+}
