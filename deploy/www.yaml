@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: www
+  namespace: websites
+  labels:
+    app: www
+spec:
+  ports:
+  - port: 80
+  selector:
+    app: www
+  clusterIP: None
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: www
+  namespace: websites
+  labels:
+    app: www
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: www
+    spec:
+      containers:
+      - image: stouffcapital/com-stouffcapital-www
+        name: www
+        ports:
+        - containerPort: 80
+          name: www
